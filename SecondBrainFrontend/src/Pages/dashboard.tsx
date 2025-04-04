@@ -71,7 +71,7 @@ function Dashboard() {
         <CreateContentModal open={modal} onClose={() => setModal(false)} />
 
         {/* Content Grid */}
-        <div className='p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 overflow-auto'>
+        <div className='p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30%] overflow-auto'>
           {filteredContent.length > 0 ? (
             filteredContent.map(content => (
               <CardComponent

@@ -40,7 +40,7 @@ export function CreateContentModal({ open, onClose }) {
     return (
         <div>
             {open && (
-                <div className="w-screen h-screen top-0 left-0 fixed bg-slate-400/50 flex justify-center items-center px-4">
+                <div className="w-screen h-screen top-0 left-0 fixed inset-0 bg-slate-400/50 flex justify-center items-center px-4 z-50">
                     <div className="flex w-full max-w-lg flex-col justify-center bg-white p-6 rounded-lg shadow-lg">
                         <div className="flex justify-end">
                             <div onClick={onClose} className="cursor-pointer">
