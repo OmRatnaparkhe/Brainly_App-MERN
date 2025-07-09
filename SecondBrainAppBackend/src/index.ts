@@ -16,6 +16,12 @@ app.use(cors({
    methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));
+app.options('*', cors({
+  origin: 'https://brainly-app-mern-59bq.vercel.app',
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
 app.post("/api/v1/signup",async(req,res)=>{
     const username = req.body.username;
     const password = req.body.password;
