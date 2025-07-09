@@ -16,17 +16,31 @@ import { TextIcon } from '../icons/textIcon';
 import { Logout } from '../icons/LogOut';
 import { useNavigate } from 'react-router-dom';
 
-function Dashboard() {
+
+export type Content = {
+  _id: string;
+  type: 'twitter' | 'youtube' | 'document'|"";
+  link: string;
+  title: string;
+  text: string;
+};
+export function Dashboard() {
   const [modal, setModal] = useState(false);
   const [selectedType, setSelectedType] = useState<'twitter' | 'youtube' | 'document' | 'All' | null>(null);
-  const { contents, refresh } = useContent();
+  const { contents, refresh } = useContent() as { contents: Content[]; refresh: () => void };
   const navigate = useNavigate();
   
   useEffect(() => {
     refresh();
   }, [modal]);
 
-  const filteredContent = selectedType ? contents.filter(content => content.type === selectedType) : contents;
+  const filteredContent = (selectedType
+    ? contents.filter(content => content.type === selectedType)
+    : contents
+  ).filter(
+    (content): content is Content & { type: "twitter" | "youtube" | "document" } =>
+      content.type === 'twitter' || content.type === 'youtube' || content.type === 'document'
+  );
 
   return (
     <div className='w-full h-screen flex bg-gray-100'>
@@ -100,4 +114,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default Dashboard
