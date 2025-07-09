@@ -11,7 +11,10 @@ import { JWT_PASSWORD } from "./config";
 import cors from "cors"
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: 'https://brainly-app-mern-59bq.vercel.app/',
+  credentials: true,
+}));
 app.post("/api/v1/signup",async(req,res)=>{
     const username = req.body.username;
     const password = req.body.password;
