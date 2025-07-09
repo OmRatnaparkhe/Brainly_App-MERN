@@ -1,13 +1,9 @@
 import axios from "axios";
 import { DeleteIcon } from "../icons/deleteIcon";
 import { ShareIcon } from "../icons/share";
-import { Button } from "./UI/button";
 import { DeleteButton } from "./UI/DeleteButton";
 import { BACKEND_URL } from "../config";
-import { render, unmountComponentAtNode } from "react-dom";
-import Dashboard from "../Pages/dashboard";
-import { useRef, useState } from "react";
-import { LinkIcon } from "../icons/linkIcon";
+
 
 interface CardProps {
   id: string;

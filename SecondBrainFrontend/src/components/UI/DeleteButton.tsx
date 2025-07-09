@@ -1,15 +1,16 @@
 import { ReactElement } from "react"
-import { DeleteIcon } from "../../icons/deleteIcon"
 
-interface deleteButtonProps {
-    Icon:ReactElement
-    onClick:(id:string)=>{}
-    reference?:any
+interface DeleteButtonProps {
+    Icon: ReactElement
+    onClick: (event: React.MouseEvent<HTMLButtonElement>) => void
+    reference?: React.Ref<HTMLButtonElement>
 }
-export function  DeleteButton({Icon,onClick,reference}:deleteButtonProps){
-    return <div>
-        <button ref={reference} onClick={onClick}>{Icon}</button>
-    </div>
-    
+
+export function DeleteButton({ Icon, onClick, reference }: DeleteButtonProps) {
+    return (
+        <div>
+            <button ref={reference} onClick={onClick}>{Icon}</button>
+        </div>
+    );
 }
 

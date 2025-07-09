@@ -3,7 +3,6 @@ import { TwitterIcon } from "../../icons/twitterIcon"
 import { YoutubeIcon } from "../../icons/youtubeIcon"
 import { Logo } from "../../icons/Logo"
 import { TextIcon } from "../../icons/textIcon"
-import { Button } from "./button"
 import { useNavigate } from "react-router-dom"
 interface sidebarProps {
     selectedType: string | null;

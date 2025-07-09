@@ -7,9 +7,9 @@ interface sidebaricons {
     onClick?:(type:"twitter"|"youtube"|"document"|"All")=>void;
     isSelected?:boolean;
 }
-export function SidebarItems({text,Icons,onClick,type,isSelected}:sidebaricons){
+export function SidebarItems({text,Icons,onClick,type}:sidebaricons){
     return <div className="flex pl-6 text-gray-500 font-normal text-justify mb-1.5 border-t-gray-300 p-2 cursor-pointer hover:bg-gray-200
-    "onClick={()=>onClick(type)} >
+    "onClick={() => onClick && type && onClick(type)} >
         <div className="pr-3">
         {Icons}
         </div>

@@ -1,5 +1,5 @@
 interface InputProps {
-    placeholder: String;
+    placeholder: string;
     reference?:any
     type?:"text" | "password"
     

@@ -28,7 +28,7 @@ const sizestyles = {
 const textstyles = "font-medium"
 export const Button = ({variant,size,startIcon,onClick,text,fullWidth,loading}: ButtonProps)=>{
     return (
-        <button onClick={onClick} className={ `${variantStyles[variant]} ${defaultstyles} ${fullWidth?" w-full flex px-4 justify-center text-center items-center" : ""} ${loading?"opacity-45":""} ${sizestyles[size]} ${textstyles}`} disabled={loading}>
+        <button onClick={onClick} className={ `${variantStyles[variant]} ${defaultstyles} ${fullWidth?" w-full flex px-4 justify-center text-center items-center" : ""} ${loading?"opacity-45":""} ${size ? sizestyles[size] : ""} ${textstyles}`} disabled={loading}>
         {startIcon ? <div className="px-1">{startIcon}</div>:null}{text}</button>
     )
 }
