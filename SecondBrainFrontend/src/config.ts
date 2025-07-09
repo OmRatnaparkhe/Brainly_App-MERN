@@ -1,1 +1,1 @@
-export const BACKEND_URL = "https://brainly-app-mern.vercel.app/"
+export const BACKEND_URL = "https://brainly-app-mern.vercel.app"
