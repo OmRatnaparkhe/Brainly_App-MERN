@@ -32,7 +32,8 @@ export function CreateContentModal({ open, onClose }) {
         }, {
             headers: {
                 "Authorization": localStorage.getItem("token")
-            }
+            },
+             withCredentials: true 
         });
         onClose();
     }

@@ -8,7 +8,8 @@ export function useContent (){
             axios.get(`${BACKEND_URL}/api/v1/content`,{
                 headers:{
                     "Authorization":localStorage.getItem("token")
-                }
+                },
+                withCredentials: true
             }).then((response)=>{
                 setContents(response.data.content)
             })

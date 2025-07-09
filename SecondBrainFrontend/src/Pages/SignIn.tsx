@@ -13,7 +13,7 @@ export function SignIn() {
     async function signin() {
         const username = usernameRef.current?.value;
         const password = passwordRef.current?.value;
-        const response = await axios.post(BACKEND_URL + "/api/v1/signin", { username, password });
+        const response = await axios.post(BACKEND_URL + "/api/v1/signin", { username, password },{ withCredentials: true });
         const jwt = response.data.token;
         localStorage.setItem("token", jwt);
         navigate("/dashboard");

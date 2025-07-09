@@ -20,7 +20,8 @@ export const CardComponent = ({ title, link, type, id, text }: CardProps) => {
         headers: {
           Authorization: localStorage.getItem("token"),
         },
-      });
+         withCredentials: true 
+      },);
       // Reload the page after successful deletion
       window.location.reload();
     } catch (error) {

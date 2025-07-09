@@ -13,7 +13,7 @@ export function SignUp() {
     async function signup() {
         const username = usernameRef.current?.value;
         const password = passwordRef.current?.value;
-        await axios.post(BACKEND_URL + "/api/v1/signup", { username, password });
+        await axios.post(BACKEND_URL + "/api/v1/signup", { username, password },{ withCredentials: true });
         alert("You've signed up!");
         navigate("/signin");
     }
