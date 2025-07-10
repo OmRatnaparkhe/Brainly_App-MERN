@@ -12,12 +12,12 @@ import cors from "cors"
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: 'https://brainly-app-mern-59bq.vercel.app',
+  origin: 'https://brainly-app-mern-59bq-mqlbc5jhh.vercel.app',
    methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));
 app.options('*', cors({
-  origin: 'https://brainly-app-mern-59bq.vercel.app',
+  origin: 'https://brainly-app-mern-59bq-mqlbc5jhh.vercel.app',
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
